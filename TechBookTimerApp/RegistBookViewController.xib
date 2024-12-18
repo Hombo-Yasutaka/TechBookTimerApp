@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegistBookViewController" customModule="TechBookTimerApp" customModuleProvider="target">
+            <connections>
+                <outlet property="cancellButton" destination="ArP-4g-oRl" id="bKE-9y-fgE"/>
+                <outlet property="searchBar" destination="kkn-uC-8sL" id="FaF-qe-5Qa"/>
+                <outlet property="tableView" destination="pTN-zv-CGi" id="aUC-Af-AAA"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ArP-4g-oRl">
+                    <rect key="frame" x="16" y="59" width="104" height="35"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="キャンセル"/>
+                    <connections>
+                        <action selector="tappedCancellButton:" destination="-1" eventType="touchUpInside" id="FhG-d5-Bz7"/>
+                    </connections>
+                </button>
+                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="kkn-uC-8sL">
+                    <rect key="frame" x="0.0" y="110" width="393" height="56"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="Xi2-g6-u54"/>
+                    </connections>
+                </searchBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="pTN-zv-CGi">
+                    <rect key="frame" x="16" y="166" width="361" height="652"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="kkn-uC-8sL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="2t5-2Q-Fhx"/>
+                <constraint firstItem="kkn-uC-8sL" firstAttribute="top" secondItem="ArP-4g-oRl" secondAttribute="bottom" constant="16" id="5E1-4Z-TEo"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pTN-zv-CGi" secondAttribute="trailing" constant="16" id="8ZV-LF-voK"/>
+                <constraint firstItem="pTN-zv-CGi" firstAttribute="top" secondItem="kkn-uC-8sL" secondAttribute="bottom" id="AuK-OD-QYA"/>
+                <constraint firstItem="ArP-4g-oRl" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="WWg-F1-bnM"/>
+                <constraint firstItem="pTN-zv-CGi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="cdO-ZF-MB2"/>
+                <constraint firstItem="ArP-4g-oRl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="mE9-5v-gov"/>
+                <constraint firstItem="kkn-uC-8sL" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="pdg-Gd-bNT"/>
+                <constraint firstItem="pTN-zv-CGi" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="wHj-6s-t70"/>
+            </constraints>
+            <point key="canvasLocation" x="72.51908396946564" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
