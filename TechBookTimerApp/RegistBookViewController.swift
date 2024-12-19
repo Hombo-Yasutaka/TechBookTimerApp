@@ -37,6 +37,14 @@ class RegistBookViewController: UIViewController {
     @objc func didTapCloseButton() {
         dismiss(animated: true, completion: nil)
     }
+
+    func showAlert() {
+        let alert = UIAlertController(title: "検索に失敗しました",
+                                      message: "正しいISBNを入力してください。",
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        self.present(alert, animated: true, completion: nil)
+    }
 }
 
 extension RegistBookViewController: UISearchBarDelegate {
@@ -46,9 +54,16 @@ extension RegistBookViewController: UISearchBarDelegate {
         if let word = searchBar.text {
             print("検索ワード: \(word)")
             let request = BookSearchRequest()
-            request.searchBook(keyword: word, completion: { books in
-
-            })
+            request.searchBook(keyword: word) { result in
+                DispatchQueue.main.async {
+                    switch result {
+                    case .success(let response):
+                        print("response: \(response)")
+                    case .failure(_):
+                        self.showAlert()
+                    }
+                }
+            }
         }
     }
 }
