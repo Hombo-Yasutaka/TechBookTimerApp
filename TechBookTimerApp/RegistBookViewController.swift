@@ -17,16 +17,21 @@ class RegistBookViewController: UIViewController {
         searchBar.delegate = self
 
         configureNavigationBar()
+        configureSearchBar()
 
     }
 
-    private func configureNavigationBar() {
+    func configureNavigationBar() {
         let closeButton = UIBarButtonItem(title: "キャンセル",
                                           style: .plain,
                                           target: self,
                                           action: #selector(didTapCloseButton))
         navigationItem.leftBarButtonItem = closeButton // leftかrightかで左右を選択
         navigationItem.title = "本の登録"
+    }
+
+    func configureSearchBar() {
+        searchBar.placeholder = "ISBNを入力してください"
     }
 
     @objc func didTapCloseButton() {
