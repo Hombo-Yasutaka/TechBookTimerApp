@@ -10,9 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegistBookViewController" customModule="TechBookTimerApp" customModuleProvider="target">
             <connections>
-                <outlet property="cancellButton" destination="ArP-4g-oRl" id="bKE-9y-fgE"/>
                 <outlet property="searchBar" destination="kkn-uC-8sL" id="FaF-qe-5Qa"/>
-                <outlet property="tableView" destination="pTN-zv-CGi" id="aUC-Af-AAA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,38 +19,40 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ArP-4g-oRl">
-                    <rect key="frame" x="16" y="59" width="104" height="35"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="キャンセル"/>
-                    <connections>
-                        <action selector="tappedCancellButton:" destination="-1" eventType="touchUpInside" id="FhG-d5-Bz7"/>
-                    </connections>
-                </button>
                 <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="kkn-uC-8sL">
-                    <rect key="frame" x="0.0" y="110" width="393" height="56"/>
+                    <rect key="frame" x="0.0" y="59" width="393" height="56"/>
                     <textInputTraits key="textInputTraits"/>
                     <connections>
                         <outlet property="delegate" destination="-1" id="Xi2-g6-u54"/>
                     </connections>
                 </searchBar>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="pTN-zv-CGi">
-                    <rect key="frame" x="16" y="166" width="361" height="652"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                </tableView>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h5H-zZ-h76">
+                    <rect key="frame" x="0.0" y="115" width="393" height="703"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Thk-sM-XtP">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="703"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="Thk-sM-XtP" firstAttribute="leading" secondItem="h5H-zZ-h76" secondAttribute="leading" id="5tD-zn-IHd"/>
+                        <constraint firstAttribute="trailing" secondItem="Thk-sM-XtP" secondAttribute="trailing" id="Cem-ll-bT4"/>
+                        <constraint firstItem="Thk-sM-XtP" firstAttribute="width" secondItem="h5H-zZ-h76" secondAttribute="width" id="MeA-vF-gGx"/>
+                        <constraint firstItem="Thk-sM-XtP" firstAttribute="top" secondItem="h5H-zZ-h76" secondAttribute="top" id="Z3B-W8-ofh"/>
+                        <constraint firstAttribute="bottom" secondItem="Thk-sM-XtP" secondAttribute="bottom" id="vsS-ik-6GV"/>
+                    </constraints>
+                </scrollView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="h5H-zZ-h76" firstAttribute="top" secondItem="kkn-uC-8sL" secondAttribute="bottom" id="0Ot-iF-dQ9"/>
                 <constraint firstItem="kkn-uC-8sL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="2t5-2Q-Fhx"/>
-                <constraint firstItem="kkn-uC-8sL" firstAttribute="top" secondItem="ArP-4g-oRl" secondAttribute="bottom" constant="16" id="5E1-4Z-TEo"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pTN-zv-CGi" secondAttribute="trailing" constant="16" id="8ZV-LF-voK"/>
-                <constraint firstItem="pTN-zv-CGi" firstAttribute="top" secondItem="kkn-uC-8sL" secondAttribute="bottom" id="AuK-OD-QYA"/>
-                <constraint firstItem="ArP-4g-oRl" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="WWg-F1-bnM"/>
-                <constraint firstItem="pTN-zv-CGi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="cdO-ZF-MB2"/>
-                <constraint firstItem="ArP-4g-oRl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="mE9-5v-gov"/>
+                <constraint firstItem="h5H-zZ-h76" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="FRS-NY-jJW"/>
+                <constraint firstItem="h5H-zZ-h76" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Nho-qf-WPl"/>
+                <constraint firstItem="kkn-uC-8sL" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="X5j-0D-GfK"/>
+                <constraint firstItem="h5H-zZ-h76" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="gNP-B4-ow9"/>
                 <constraint firstItem="kkn-uC-8sL" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="pdg-Gd-bNT"/>
-                <constraint firstItem="pTN-zv-CGi" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="wHj-6s-t70"/>
             </constraints>
             <point key="canvasLocation" x="72.51908396946564" y="19.718309859154932"/>
         </view>
