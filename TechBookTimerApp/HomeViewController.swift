@@ -18,6 +18,7 @@ class HomeViewController: UIViewController {
         print("TimeLineViewControllerが表示されました")
 
         // Do any additional setup after loading the view.
+        configureNavigationBar()
         configureAddButton()
         configureTableView()
         setBookData()
@@ -38,6 +39,10 @@ class HomeViewController: UIViewController {
             let bookDataModel = BookDataModel(title: "本\(i)")
             bookDataList.append(bookDataModel)
         }
+    }
+
+    func configureNavigationBar() {
+        navigationItem.title = "ホーム"
     }
 
     func configureAddButton() {

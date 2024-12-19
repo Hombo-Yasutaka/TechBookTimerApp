@@ -9,19 +9,27 @@ import UIKit
 
 class RegistBookViewController: UIViewController {
 
-    @IBOutlet weak var cancellButton: UIButton!
     @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("本の登録画面です")
         searchBar.delegate = self
 
+        configureNavigationBar()
+
     }
 
+    private func configureNavigationBar() {
+        let closeButton = UIBarButtonItem(title: "キャンセル",
+                                          style: .plain,
+                                          target: self,
+                                          action: #selector(didTapCloseButton))
+        navigationItem.leftBarButtonItem = closeButton // leftかrightかで左右を選択
+        navigationItem.title = "本の登録"
+    }
 
-    @IBAction func tappedCancellButton(_ sender: UIButton) {
+    @objc func didTapCloseButton() {
         dismiss(animated: true, completion: nil)
     }
 }
