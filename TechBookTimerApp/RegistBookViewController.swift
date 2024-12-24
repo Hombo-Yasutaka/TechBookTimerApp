@@ -10,6 +10,9 @@ import UIKit
 class RegistBookViewController: UIViewController {
 
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var bookNameLabel: UILabel!
+    @IBOutlet weak var bookImageView: UIImageView!
+    @IBOutlet weak var noImageLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +21,7 @@ class RegistBookViewController: UIViewController {
 
         configureNavigationBar()
         configureSearchBar()
+        configureBookNameLabel()
 
     }
 
@@ -34,8 +38,25 @@ class RegistBookViewController: UIViewController {
         searchBar.placeholder = "ISBNを入力してください"
     }
 
+    func configureBookNameLabel() {
+        bookNameLabel.numberOfLines = 0
+    }
+
     @objc func didTapCloseButton() {
         dismiss(animated: true, completion: nil)
+    }
+
+    func downloadImage(from url: URL) {
+        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+            guard let data = data, error == nil else {
+                print("Failed to download image: \(error?.localizedDescription ?? "No error description")")
+                return
+            }
+            DispatchQueue.main.async {
+                self.bookImageView.image = UIImage(data: data)
+            }
+        }
+        task.resume()
     }
 
     func showAlert() {
@@ -58,7 +79,33 @@ extension RegistBookViewController: UISearchBarDelegate {
                 DispatchQueue.main.async {
                     switch result {
                     case .success(let response):
-                        print("response: \(response)")
+                        print("response: \(response.summary.title!)")
+                        self.bookNameLabel.text = response.summary.title
+                        if let imageString = response.summary.cover, let url = URL(string: imageString) {
+                            self.downloadImage(from: url)
+                            self.noImageLabel.isHidden = true
+                            self.bookImageView.backgroundColor = .white
+                        } else {
+                            let label = UILabel()
+                            label.text = "No Image"
+                            label.textAlignment = .center
+                            label.textColor = .gray
+                            label.font = .systemFont(ofSize: 14)
+                            label.translatesAutoresizingMaskIntoConstraints = false
+
+                            // ImageViewに追加
+                            self.bookImageView.addSubview(label)
+                            self.bookImageView.backgroundColor = .systemGray6
+
+                            // 制約を設定
+                            NSLayoutConstraint.activate([
+                                label.centerXAnchor.constraint(equalTo: self.bookImageView.centerXAnchor),
+                                label.centerYAnchor.constraint(equalTo: self.bookImageView.centerYAnchor)
+                            ])
+
+                            self.noImageLabel = label
+                            self.bookImageView.image = nil
+                        }
                     case .failure(_):
                         self.showAlert()
                     }
