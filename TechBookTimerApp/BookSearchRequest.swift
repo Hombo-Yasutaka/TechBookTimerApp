@@ -193,7 +193,7 @@ struct Summary: Codable {
 
 final class BookSearchRequest {
 
-    func searchBook(keyword: String, completion: @escaping (Result<[BookResponse], Error>) -> Void) {
+    func searchBook(keyword: String, completion: @escaping (Result<BookResponse, Error>) -> Void) {
         let path = "https://api.openbd.jp/v1/get?isbn=\(keyword)"
         APIClient.shared.getRequest(urlString: path) { result in
             switch result {
@@ -207,13 +207,13 @@ final class BookSearchRequest {
                     if let jsonObject = try? JSONSerialization.jsonObject(with: jsonData, options: []),
                        let prettyJsonData = try? JSONSerialization.data(withJSONObject: jsonObject, options: .prettyPrinted),
                        let prettyPrintedString = String(data: prettyJsonData, encoding: .utf8) {
-                        print("GET request successful: \(prettyPrintedString)")
+                        print("GET request successful1: \(prettyPrintedString)")
                     } else {
-                        print("GET request successful: \(response)")
+                        print("GET request successful2: \(response)")
                     }
 
                     // 呼び出し元へ取得データを渡す
-                    completion(.success(response))
+                    completion(.success(response[0]))
                 } catch {
                     // デコード失敗
                     print("JSON Decoding failed: \(error.localizedDescription)")

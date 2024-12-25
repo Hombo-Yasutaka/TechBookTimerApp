@@ -35,10 +35,10 @@ class HomeViewController: UIViewController {
     }
 
     func setBookData() {
-        for i in 1...5 {
-            let bookDataModel = BookDataModel(title: "本\(i)")
-            bookDataList.append(bookDataModel)
-        }
+//        for i in 1...5 {
+//            let bookDataModel = BookDataModel(title: "本\(i)")
+//            bookDataList.append(bookDataModel)
+//        }
     }
 
     func configureNavigationBar() {
@@ -57,6 +57,16 @@ class HomeViewController: UIViewController {
         if #available(iOS 15.0, *) {
             tableView.fillerRowHeight = 50
         }
+
+        let messageLabel = UILabel()
+        messageLabel.text = "+ボタンから本の登録を行なってください"
+        messageLabel.textColor = .gray
+        messageLabel.numberOfLines = 0
+        messageLabel.textAlignment = .center
+        messageLabel.font = .systemFont(ofSize: 15)
+        messageLabel.sizeToFit()
+
+        tableView.backgroundView = messageLabel
     }
 
     func navigateToRegistBookViewController() {
