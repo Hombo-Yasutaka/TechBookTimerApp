@@ -6,7 +6,11 @@
 //
 
 import Foundation
+import RealmSwift
 
-struct BookDataModel {
-    let title: String
+class BookDataModel: Object {
+    @Persisted var id: String = UUID().uuidString
+    @Persisted var title: String = ""
+    @Persisted var imageUrl: String = ""
+    @Persisted var Sections: List<SectionDataModel>
 }

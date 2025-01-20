@@ -3,8 +3,33 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 56;
 	objects = {
+
+/* Begin PBXBuildFile section */
+		458A0A192D3E88E20073D884 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 458A0A082D3E88E20073D884 /* Assets.xcassets */; };
+		458A0A1A2D3E88E20073D884 /* BookDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 458A0A0B2D3E88E20073D884 /* BookDetailViewController.xib */; };
+		458A0A1B2D3E88E20073D884 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 458A0A0E2D3E88E20073D884 /* HomeViewController.xib */; };
+		458A0A1D2D3E88E20073D884 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 458A0A112D3E88E20073D884 /* LaunchScreen.storyboard */; };
+		458A0A1E2D3E88E20073D884 /* RegistBookViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 458A0A132D3E88E20073D884 /* RegistBookViewController.xib */; };
+		458A0A1F2D3E88E20073D884 /* RegistSectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 458A0A152D3E88E20073D884 /* RegistSectionViewController.xib */; };
+		458A0A202D3E88E20073D884 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458A0A062D3E88E20073D884 /* APIClient.swift */; };
+		458A0A212D3E88E20073D884 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458A0A072D3E88E20073D884 /* AppDelegate.swift */; };
+		458A0A222D3E88E20073D884 /* BookDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458A0A092D3E88E20073D884 /* BookDataModel.swift */; };
+		458A0A232D3E88E20073D884 /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458A0A0A2D3E88E20073D884 /* BookDetailViewController.swift */; };
+		458A0A242D3E88E20073D884 /* BookSearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458A0A0C2D3E88E20073D884 /* BookSearchRequest.swift */; };
+		458A0A252D3E88E20073D884 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458A0A0D2D3E88E20073D884 /* HomeViewController.swift */; };
+		458A0A262D3E88E20073D884 /* RegistBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458A0A122D3E88E20073D884 /* RegistBookViewController.swift */; };
+		458A0A272D3E88E20073D884 /* RegistSectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458A0A142D3E88E20073D884 /* RegistSectionViewController.swift */; };
+		458A0A282D3E88E20073D884 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458A0A162D3E88E20073D884 /* SceneDelegate.swift */; };
+		458A0A292D3E88E20073D884 /* SectionDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458A0A172D3E88E20073D884 /* SectionDataModel.swift */; };
+		458A0A2C2D3E88E60073D884 /* TechBookTimerAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458A0A2A2D3E88E60073D884 /* TechBookTimerAppTests.swift */; };
+		458A0A302D3E88E90073D884 /* TechBookTimerAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458A0A2D2D3E88E90073D884 /* TechBookTimerAppUITests.swift */; };
+		458A0A312D3E88E90073D884 /* TechBookTimerAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458A0A2E2D3E88E90073D884 /* TechBookTimerAppUITestsLaunchTests.swift */; };
+		C0A6DF8055CA13C4239D83C6 /* Pods_TechBookTimerApp_TechBookTimerAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13154DB2CEACA9F974555E95 /* Pods_TechBookTimerApp_TechBookTimerAppUITests.framework */; };
+		CE2E80FD7323D9B9741A185D /* Pods_TechBookTimerAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3426C11E60BFC0EA5C930E /* Pods_TechBookTimerAppTests.framework */; };
+		D4F1A34E25DA3393496963D7 /* Pods_TechBookTimerApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9C5D29E6CBBF4E36CAA4EC /* Pods_TechBookTimerApp.framework */; };
+/* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		452E08972D0C2AAC005154B6 /* PBXContainerItemProxy */ = {
@@ -24,47 +49,46 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		13154DB2CEACA9F974555E95 /* Pods_TechBookTimerApp_TechBookTimerAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TechBookTimerApp_TechBookTimerAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D40E0A751FA0E9BEA9E5A4C /* Pods-TechBookTimerAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechBookTimerAppTests.release.xcconfig"; path = "Target Support Files/Pods-TechBookTimerAppTests/Pods-TechBookTimerAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		452E08802D0C2AAA005154B6 /* TechBookTimerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TechBookTimerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		452E08962D0C2AAC005154B6 /* TechBookTimerAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TechBookTimerAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		452E08A02D0C2AAC005154B6 /* TechBookTimerAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TechBookTimerAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		458A0A062D3E88E20073D884 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		458A0A072D3E88E20073D884 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		458A0A082D3E88E20073D884 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		458A0A092D3E88E20073D884 /* BookDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDataModel.swift; sourceTree = "<group>"; };
+		458A0A0A2D3E88E20073D884 /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
+		458A0A0B2D3E88E20073D884 /* BookDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookDetailViewController.xib; sourceTree = "<group>"; };
+		458A0A0C2D3E88E20073D884 /* BookSearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchRequest.swift; sourceTree = "<group>"; };
+		458A0A0D2D3E88E20073D884 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		458A0A0E2D3E88E20073D884 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		458A0A0F2D3E88E20073D884 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		458A0A102D3E88E20073D884 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		458A0A122D3E88E20073D884 /* RegistBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistBookViewController.swift; sourceTree = "<group>"; };
+		458A0A132D3E88E20073D884 /* RegistBookViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistBookViewController.xib; sourceTree = "<group>"; };
+		458A0A142D3E88E20073D884 /* RegistSectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistSectionViewController.swift; sourceTree = "<group>"; };
+		458A0A152D3E88E20073D884 /* RegistSectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistSectionViewController.xib; sourceTree = "<group>"; };
+		458A0A162D3E88E20073D884 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		458A0A172D3E88E20073D884 /* SectionDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionDataModel.swift; sourceTree = "<group>"; };
+		458A0A2A2D3E88E60073D884 /* TechBookTimerAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechBookTimerAppTests.swift; sourceTree = "<group>"; };
+		458A0A2D2D3E88E90073D884 /* TechBookTimerAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechBookTimerAppUITests.swift; sourceTree = "<group>"; };
+		458A0A2E2D3E88E90073D884 /* TechBookTimerAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechBookTimerAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4BB76EFD346E03356DD4AB85 /* Pods-TechBookTimerApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechBookTimerApp.release.xcconfig"; path = "Target Support Files/Pods-TechBookTimerApp/Pods-TechBookTimerApp.release.xcconfig"; sourceTree = "<group>"; };
+		7014ADE06E0C584F4F571B6E /* Pods-TechBookTimerApp-TechBookTimerAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechBookTimerApp-TechBookTimerAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-TechBookTimerApp-TechBookTimerAppUITests/Pods-TechBookTimerApp-TechBookTimerAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		83A8D57CDAF572AFF41D5A66 /* Pods-TechBookTimerApp-TechBookTimerAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechBookTimerApp-TechBookTimerAppUITests.release.xcconfig"; path = "Target Support Files/Pods-TechBookTimerApp-TechBookTimerAppUITests/Pods-TechBookTimerApp-TechBookTimerAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A1FDD23DD2D3FE44EE7AA6D4 /* Pods-TechBookTimerAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechBookTimerAppTests.debug.xcconfig"; path = "Target Support Files/Pods-TechBookTimerAppTests/Pods-TechBookTimerAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DD3426C11E60BFC0EA5C930E /* Pods_TechBookTimerAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TechBookTimerAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB1A7D9D47B85960EE1D2DE3 /* Pods-TechBookTimerApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechBookTimerApp.debug.xcconfig"; path = "Target Support Files/Pods-TechBookTimerApp/Pods-TechBookTimerApp.debug.xcconfig"; sourceTree = "<group>"; };
+		FE9C5D29E6CBBF4E36CAA4EC /* Pods_TechBookTimerApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TechBookTimerApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		452E08A82D0C2AAC005154B6 /* Exceptions for "TechBookTimerApp" folder in "TechBookTimerApp" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 452E087F2D0C2AAA005154B6 /* TechBookTimerApp */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		452E08822D0C2AAA005154B6 /* TechBookTimerApp */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				452E08A82D0C2AAC005154B6 /* Exceptions for "TechBookTimerApp" folder in "TechBookTimerApp" target */,
-			);
-			path = TechBookTimerApp;
-			sourceTree = "<group>";
-		};
-		452E08992D0C2AAC005154B6 /* TechBookTimerAppTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = TechBookTimerAppTests;
-			sourceTree = "<group>";
-		};
-		452E08A32D0C2AAC005154B6 /* TechBookTimerAppUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = TechBookTimerAppUITests;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		452E087D2D0C2AAA005154B6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4F1A34E25DA3393496963D7 /* Pods_TechBookTimerApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE2E80FD7323D9B9741A185D /* Pods_TechBookTimerAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0A6DF8055CA13C4239D83C6 /* Pods_TechBookTimerApp_TechBookTimerAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,10 +114,12 @@
 		452E08772D0C2AAA005154B6 = {
 			isa = PBXGroup;
 			children = (
-				452E08822D0C2AAA005154B6 /* TechBookTimerApp */,
-				452E08992D0C2AAC005154B6 /* TechBookTimerAppTests */,
-				452E08A32D0C2AAC005154B6 /* TechBookTimerAppUITests */,
+				458A0A182D3E88E20073D884 /* TechBookTimerApp */,
+				458A0A2B2D3E88E60073D884 /* TechBookTimerAppTests */,
+				458A0A2F2D3E88E90073D884 /* TechBookTimerAppUITests */,
 				452E08812D0C2AAA005154B6 /* Products */,
+				7C2AC0F3A76F8C7D1395409E /* Pods */,
+				BE68422AE8F5071B82B1D0BD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +133,70 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		458A0A182D3E88E20073D884 /* TechBookTimerApp */ = {
+			isa = PBXGroup;
+			children = (
+				458A0A062D3E88E20073D884 /* APIClient.swift */,
+				458A0A072D3E88E20073D884 /* AppDelegate.swift */,
+				458A0A082D3E88E20073D884 /* Assets.xcassets */,
+				458A0A092D3E88E20073D884 /* BookDataModel.swift */,
+				458A0A0A2D3E88E20073D884 /* BookDetailViewController.swift */,
+				458A0A0B2D3E88E20073D884 /* BookDetailViewController.xib */,
+				458A0A0C2D3E88E20073D884 /* BookSearchRequest.swift */,
+				458A0A0D2D3E88E20073D884 /* HomeViewController.swift */,
+				458A0A0E2D3E88E20073D884 /* HomeViewController.xib */,
+				458A0A0F2D3E88E20073D884 /* Info.plist */,
+				458A0A112D3E88E20073D884 /* LaunchScreen.storyboard */,
+				458A0A122D3E88E20073D884 /* RegistBookViewController.swift */,
+				458A0A132D3E88E20073D884 /* RegistBookViewController.xib */,
+				458A0A142D3E88E20073D884 /* RegistSectionViewController.swift */,
+				458A0A152D3E88E20073D884 /* RegistSectionViewController.xib */,
+				458A0A162D3E88E20073D884 /* SceneDelegate.swift */,
+				458A0A172D3E88E20073D884 /* SectionDataModel.swift */,
+			);
+			path = TechBookTimerApp;
+			sourceTree = "<group>";
+		};
+		458A0A2B2D3E88E60073D884 /* TechBookTimerAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				458A0A2A2D3E88E60073D884 /* TechBookTimerAppTests.swift */,
+			);
+			path = TechBookTimerAppTests;
+			sourceTree = "<group>";
+		};
+		458A0A2F2D3E88E90073D884 /* TechBookTimerAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				458A0A2D2D3E88E90073D884 /* TechBookTimerAppUITests.swift */,
+				458A0A2E2D3E88E90073D884 /* TechBookTimerAppUITestsLaunchTests.swift */,
+			);
+			path = TechBookTimerAppUITests;
+			sourceTree = "<group>";
+		};
+		7C2AC0F3A76F8C7D1395409E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EB1A7D9D47B85960EE1D2DE3 /* Pods-TechBookTimerApp.debug.xcconfig */,
+				4BB76EFD346E03356DD4AB85 /* Pods-TechBookTimerApp.release.xcconfig */,
+				7014ADE06E0C584F4F571B6E /* Pods-TechBookTimerApp-TechBookTimerAppUITests.debug.xcconfig */,
+				83A8D57CDAF572AFF41D5A66 /* Pods-TechBookTimerApp-TechBookTimerAppUITests.release.xcconfig */,
+				A1FDD23DD2D3FE44EE7AA6D4 /* Pods-TechBookTimerAppTests.debug.xcconfig */,
+				2D40E0A751FA0E9BEA9E5A4C /* Pods-TechBookTimerAppTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BE68422AE8F5071B82B1D0BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FE9C5D29E6CBBF4E36CAA4EC /* Pods_TechBookTimerApp.framework */,
+				13154DB2CEACA9F974555E95 /* Pods_TechBookTimerApp_TechBookTimerAppUITests.framework */,
+				DD3426C11E60BFC0EA5C930E /* Pods_TechBookTimerAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -112,20 +204,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 452E08A92D0C2AAC005154B6 /* Build configuration list for PBXNativeTarget "TechBookTimerApp" */;
 			buildPhases = (
+				E43604AC73D1FC9C4827D774 /* [CP] Check Pods Manifest.lock */,
 				452E087C2D0C2AAA005154B6 /* Sources */,
 				452E087D2D0C2AAA005154B6 /* Frameworks */,
 				452E087E2D0C2AAA005154B6 /* Resources */,
+				18BA52B80F0244CF5DFC8EFC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				452E08822D0C2AAA005154B6 /* TechBookTimerApp */,
-			);
 			name = TechBookTimerApp;
-			packageProductDependencies = (
-			);
 			productName = TechBookTimerApp;
 			productReference = 452E08802D0C2AAA005154B6 /* TechBookTimerApp.app */;
 			productType = "com.apple.product-type.application";
@@ -134,6 +223,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 452E08AE2D0C2AAC005154B6 /* Build configuration list for PBXNativeTarget "TechBookTimerAppTests" */;
 			buildPhases = (
+				A75DD91FE19BD34E89974729 /* [CP] Check Pods Manifest.lock */,
 				452E08922D0C2AAC005154B6 /* Sources */,
 				452E08932D0C2AAC005154B6 /* Frameworks */,
 				452E08942D0C2AAC005154B6 /* Resources */,
@@ -143,12 +233,7 @@
 			dependencies = (
 				452E08982D0C2AAC005154B6 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				452E08992D0C2AAC005154B6 /* TechBookTimerAppTests */,
-			);
 			name = TechBookTimerAppTests;
-			packageProductDependencies = (
-			);
 			productName = TechBookTimerAppTests;
 			productReference = 452E08962D0C2AAC005154B6 /* TechBookTimerAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -157,21 +242,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 452E08B12D0C2AAC005154B6 /* Build configuration list for PBXNativeTarget "TechBookTimerAppUITests" */;
 			buildPhases = (
+				5D1C69619C9F93219704A3BC /* [CP] Check Pods Manifest.lock */,
 				452E089C2D0C2AAC005154B6 /* Sources */,
 				452E089D2D0C2AAC005154B6 /* Frameworks */,
 				452E089E2D0C2AAC005154B6 /* Resources */,
+				B421F42EA42A129375DBF5D1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				452E08A22D0C2AAC005154B6 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				452E08A32D0C2AAC005154B6 /* TechBookTimerAppUITests */,
-			);
 			name = TechBookTimerAppUITests;
-			packageProductDependencies = (
-			);
 			productName = TechBookTimerAppUITests;
 			productReference = 452E08A02D0C2AAC005154B6 /* TechBookTimerAppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -200,6 +282,7 @@
 				};
 			};
 			buildConfigurationList = 452E087B2D0C2AAA005154B6 /* Build configuration list for PBXProject "TechBookTimerApp" */;
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -207,8 +290,6 @@
 				Base,
 			);
 			mainGroup = 452E08772D0C2AAA005154B6;
-			minimizedProjectReferenceProxies = 1;
-			preferredProjectObjectVersion = 77;
 			productRefGroup = 452E08812D0C2AAA005154B6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -225,6 +306,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				458A0A192D3E88E20073D884 /* Assets.xcassets in Resources */,
+				458A0A1A2D3E88E20073D884 /* BookDetailViewController.xib in Resources */,
+				458A0A1B2D3E88E20073D884 /* HomeViewController.xib in Resources */,
+				458A0A1D2D3E88E20073D884 /* LaunchScreen.storyboard in Resources */,
+				458A0A1E2D3E88E20073D884 /* RegistBookViewController.xib in Resources */,
+				458A0A1F2D3E88E20073D884 /* RegistSectionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,11 +331,124 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		18BA52B80F0244CF5DFC8EFC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TechBookTimerApp/Pods-TechBookTimerApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TechBookTimerApp/Pods-TechBookTimerApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TechBookTimerApp/Pods-TechBookTimerApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D1C69619C9F93219704A3BC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TechBookTimerApp-TechBookTimerAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A75DD91FE19BD34E89974729 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TechBookTimerAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B421F42EA42A129375DBF5D1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TechBookTimerApp-TechBookTimerAppUITests/Pods-TechBookTimerApp-TechBookTimerAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TechBookTimerApp-TechBookTimerAppUITests/Pods-TechBookTimerApp-TechBookTimerAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TechBookTimerApp-TechBookTimerAppUITests/Pods-TechBookTimerApp-TechBookTimerAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E43604AC73D1FC9C4827D774 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TechBookTimerApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		452E087C2D0C2AAA005154B6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				458A0A202D3E88E20073D884 /* APIClient.swift in Sources */,
+				458A0A212D3E88E20073D884 /* AppDelegate.swift in Sources */,
+				458A0A222D3E88E20073D884 /* BookDataModel.swift in Sources */,
+				458A0A232D3E88E20073D884 /* BookDetailViewController.swift in Sources */,
+				458A0A242D3E88E20073D884 /* BookSearchRequest.swift in Sources */,
+				458A0A252D3E88E20073D884 /* HomeViewController.swift in Sources */,
+				458A0A262D3E88E20073D884 /* RegistBookViewController.swift in Sources */,
+				458A0A272D3E88E20073D884 /* RegistSectionViewController.swift in Sources */,
+				458A0A282D3E88E20073D884 /* SceneDelegate.swift in Sources */,
+				458A0A292D3E88E20073D884 /* SectionDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +456,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				458A0A2C2D3E88E60073D884 /* TechBookTimerAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +464,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				458A0A302D3E88E90073D884 /* TechBookTimerAppUITests.swift in Sources */,
+				458A0A312D3E88E90073D884 /* TechBookTimerAppUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,15 +484,28 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		458A0A112D3E88E20073D884 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				458A0A102D3E88E20073D884 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		452E08AA2D0C2AAC005154B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB1A7D9D47B85960EE1D2DE3 /* Pods-TechBookTimerApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 73Y7G7G858;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TechBookTimerApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -311,12 +527,14 @@
 		};
 		452E08AB2D0C2AAC005154B6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BB76EFD346E03356DD4AB85 /* Pods-TechBookTimerApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 73Y7G7G858;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TechBookTimerApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -457,6 +675,7 @@
 		};
 		452E08AF2D0C2AAC005154B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1FDD23DD2D3FE44EE7AA6D4 /* Pods-TechBookTimerAppTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -476,6 +695,7 @@
 		};
 		452E08B02D0C2AAC005154B6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D40E0A751FA0E9BEA9E5A4C /* Pods-TechBookTimerAppTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -495,6 +715,7 @@
 		};
 		452E08B22D0C2AAC005154B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7014ADE06E0C584F4F571B6E /* Pods-TechBookTimerApp-TechBookTimerAppUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -512,6 +733,7 @@
 		};
 		452E08B32D0C2AAC005154B6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83A8D57CDAF572AFF41D5A66 /* Pods-TechBookTimerApp-TechBookTimerAppUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

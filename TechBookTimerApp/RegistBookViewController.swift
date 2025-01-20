@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class RegistBookViewController: UIViewController {
 
@@ -13,7 +14,10 @@ class RegistBookViewController: UIViewController {
     @IBOutlet weak var bookNameLabel: UILabel!
     @IBOutlet weak var bookImageView: UIImageView!
     @IBOutlet weak var noImageLabel: UILabel!
-    
+
+    var bookData = BookDataModel()
+    var okFlag = false
+
     override func viewDidLoad() {
         super.viewDidLoad()
         print("本の登録画面です")
@@ -31,6 +35,11 @@ class RegistBookViewController: UIViewController {
                                           target: self,
                                           action: #selector(didTapCloseButton))
         navigationItem.leftBarButtonItem = closeButton // leftかrightかで左右を選択
+        let registButton = UIBarButtonItem(title: "登録",
+                                           style: .plain,
+                                           target: self,
+                                           action: #selector(didTapRegistButton))
+        navigationItem.rightBarButtonItem = registButton
         navigationItem.title = "本の登録"
     }
 
@@ -46,6 +55,16 @@ class RegistBookViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
 
+    @objc func didTapRegistButton() {
+        if okFlag {
+            saveData()
+            dismiss(animated: true, completion: nil)
+        } else {
+            showAlert(title: "登録に失敗しました", message: "ISBNによる検索を行ってください")
+        }
+
+    }
+
     func downloadImage(from url: URL) {
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             guard let data = data, error == nil else {
@@ -59,12 +78,20 @@ class RegistBookViewController: UIViewController {
         task.resume()
     }
 
-    func showAlert() {
-        let alert = UIAlertController(title: "検索に失敗しました",
-                                      message: "正しいISBNを入力してください。",
+    func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title,
+                                      message: message,
                                       preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default))
         self.present(alert, animated: true, completion: nil)
+    }
+
+    func saveData() {
+        let realm = try! Realm()
+        try! realm.write {
+            realm.add(bookData)
+        }
+        print("bookData: \(bookData)")
     }
 }
 
@@ -81,7 +108,10 @@ extension RegistBookViewController: UISearchBarDelegate {
                     case .success(let response):
                         print("response: \(response.summary.title!)")
                         self.bookNameLabel.text = response.summary.title
+                        self.bookData.title = response.summary.title!
+                        self.okFlag = true
                         if let imageString = response.summary.cover, let url = URL(string: imageString) {
+                            self.bookData.imageUrl = imageString
                             self.downloadImage(from: url)
                             self.noImageLabel.isHidden = true
                             self.bookImageView.backgroundColor = .white
@@ -107,7 +137,8 @@ extension RegistBookViewController: UISearchBarDelegate {
                             self.bookImageView.image = nil
                         }
                     case .failure(_):
-                        self.showAlert()
+                        self.showAlert(title: "検索に失敗しました",
+                                       message: "正しいISBNを入力してください")
                     }
                 }
             }
