@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class HomeViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
@@ -20,25 +21,18 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
         configureNavigationBar()
         configureAddButton()
-        configureTableView()
-        setBookData()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        setBookData()
+        configureTableView()
         tableView.reloadData()
     }
 
     @IBAction func tappedAddButton(_ sender: UIButton) {
         print("EditViewControllerへ遷移します")
         navigateToRegistBookViewController()
-    }
-
-    func setBookData() {
-//        for i in 1...5 {
-//            let bookDataModel = BookDataModel(title: "本\(i)")
-//            bookDataList.append(bookDataModel)
-//        }
     }
 
     func configureNavigationBar() {
@@ -51,6 +45,7 @@ class HomeViewController: UIViewController {
 
     func configureTableView() {
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.tableFooterView = UIView()
         tableView.separatorColor = .lightGray
         tableView.separatorStyle = .singleLine
@@ -65,8 +60,17 @@ class HomeViewController: UIViewController {
         messageLabel.textAlignment = .center
         messageLabel.font = .systemFont(ofSize: 15)
         messageLabel.sizeToFit()
+        if bookDataList.isEmpty {
+            tableView.backgroundView = messageLabel
+        } else {
+            tableView.backgroundView = nil
+        }
+    }
 
-        tableView.backgroundView = messageLabel
+    func setBookData() {
+        let realm = try! Realm()
+        let result = realm.objects(BookDataModel.self)
+        bookDataList = Array(result)
     }
 
     func navigateToRegistBookViewController() {
@@ -88,5 +92,14 @@ extension HomeViewController: UITableViewDataSource {
         let bookDataModel: BookDataModel = bookDataList[indexPath.row]
         cell.textLabel?.text = bookDataModel.title
         return cell
+    }
+}
+
+extension HomeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let nextVC = BookDetailViewController(nibName: "BookDetailViewController", bundle: nil)
+        let bookData = bookDataList[indexPath.row]
+        nextVC.configureBookData(with: bookData)
+        navigationController?.pushViewController(nextVC, animated: true)
     }
 }
