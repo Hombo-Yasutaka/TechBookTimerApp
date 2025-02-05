@@ -117,7 +117,7 @@ class BookDetailViewController: UIViewController {
 
     func configureTableView() {
         tableView.dataSource = self
-//        tableView.delegate = self
+        tableView.delegate = self
         tableView.tableFooterView = UIView()
         tableView.separatorColor = .lightGray
         tableView.separatorStyle = .singleLine
@@ -151,5 +151,14 @@ extension BookDetailViewController: UITableViewDataSource {
         let sectionDataModel: SectionDataModel = sectionDataList[indexPath.row]
         cell.textLabel?.text = sectionDataModel.sectionName
         return cell
+    }
+}
+
+extension BookDetailViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let nextVC = TimerViewController(nibName: "TimerViewController", bundle: nil)
+//        let bookData = bookDataList[indexPath.row]
+//        nextVC.configureBookData(with: bookData)
+        navigationController?.pushViewController(nextVC, animated: true)
     }
 }
