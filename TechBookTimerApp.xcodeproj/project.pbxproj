@@ -26,6 +26,8 @@
 		458A0A2C2D3E88E60073D884 /* TechBookTimerAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458A0A2A2D3E88E60073D884 /* TechBookTimerAppTests.swift */; };
 		458A0A302D3E88E90073D884 /* TechBookTimerAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458A0A2D2D3E88E90073D884 /* TechBookTimerAppUITests.swift */; };
 		458A0A312D3E88E90073D884 /* TechBookTimerAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458A0A2E2D3E88E90073D884 /* TechBookTimerAppUITestsLaunchTests.swift */; };
+		458A0A5D2D51B1030073D884 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458A0A5B2D51B1030073D884 /* TimerViewController.swift */; };
+		458A0A5E2D51B1030073D884 /* TimerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 458A0A5C2D51B1030073D884 /* TimerViewController.xib */; };
 		C0A6DF8055CA13C4239D83C6 /* Pods_TechBookTimerApp_TechBookTimerAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13154DB2CEACA9F974555E95 /* Pods_TechBookTimerApp_TechBookTimerAppUITests.framework */; };
 		CE2E80FD7323D9B9741A185D /* Pods_TechBookTimerAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3426C11E60BFC0EA5C930E /* Pods_TechBookTimerAppTests.framework */; };
 		D4F1A34E25DA3393496963D7 /* Pods_TechBookTimerApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9C5D29E6CBBF4E36CAA4EC /* Pods_TechBookTimerApp.framework */; };
@@ -74,6 +76,8 @@
 		458A0A2A2D3E88E60073D884 /* TechBookTimerAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechBookTimerAppTests.swift; sourceTree = "<group>"; };
 		458A0A2D2D3E88E90073D884 /* TechBookTimerAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechBookTimerAppUITests.swift; sourceTree = "<group>"; };
 		458A0A2E2D3E88E90073D884 /* TechBookTimerAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechBookTimerAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		458A0A5B2D51B1030073D884 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		458A0A5C2D51B1030073D884 /* TimerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimerViewController.xib; sourceTree = "<group>"; };
 		4BB76EFD346E03356DD4AB85 /* Pods-TechBookTimerApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechBookTimerApp.release.xcconfig"; path = "Target Support Files/Pods-TechBookTimerApp/Pods-TechBookTimerApp.release.xcconfig"; sourceTree = "<group>"; };
 		7014ADE06E0C584F4F571B6E /* Pods-TechBookTimerApp-TechBookTimerAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechBookTimerApp-TechBookTimerAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-TechBookTimerApp-TechBookTimerAppUITests/Pods-TechBookTimerApp-TechBookTimerAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		83A8D57CDAF572AFF41D5A66 /* Pods-TechBookTimerApp-TechBookTimerAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechBookTimerApp-TechBookTimerAppUITests.release.xcconfig"; path = "Target Support Files/Pods-TechBookTimerApp-TechBookTimerAppUITests/Pods-TechBookTimerApp-TechBookTimerAppUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -153,6 +157,8 @@
 				458A0A152D3E88E20073D884 /* RegistSectionViewController.xib */,
 				458A0A162D3E88E20073D884 /* SceneDelegate.swift */,
 				458A0A172D3E88E20073D884 /* SectionDataModel.swift */,
+				458A0A5B2D51B1030073D884 /* TimerViewController.swift */,
+				458A0A5C2D51B1030073D884 /* TimerViewController.xib */,
 			);
 			path = TechBookTimerApp;
 			sourceTree = "<group>";
@@ -306,6 +312,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				458A0A5E2D51B1030073D884 /* TimerViewController.xib in Resources */,
 				458A0A192D3E88E20073D884 /* Assets.xcassets in Resources */,
 				458A0A1A2D3E88E20073D884 /* BookDetailViewController.xib in Resources */,
 				458A0A1B2D3E88E20073D884 /* HomeViewController.xib in Resources */,
@@ -448,6 +455,7 @@
 				458A0A262D3E88E20073D884 /* RegistBookViewController.swift in Sources */,
 				458A0A272D3E88E20073D884 /* RegistSectionViewController.swift in Sources */,
 				458A0A282D3E88E20073D884 /* SceneDelegate.swift in Sources */,
+				458A0A5D2D51B1030073D884 /* TimerViewController.swift in Sources */,
 				458A0A292D3E88E20073D884 /* SectionDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
